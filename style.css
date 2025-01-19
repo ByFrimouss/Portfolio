@@ -31,7 +31,7 @@ nav {
 }
 
 .logo {
-  padding-left: 173px;
+  padding-left: 140px;
 }
 
 .logo img {
@@ -41,7 +41,7 @@ nav {
 }
 
 .menu {
-  padding-left: 514px;
+  padding-left: 620px;
 }
 
 .link-primary {
@@ -126,10 +126,5 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 962px;
-  z-index: 10;
-}
-.hero-content {
-  width: 1000px;
-  height: 142px;
+  height: 100vh;
 }
