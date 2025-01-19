@@ -1,7 +1,116 @@
 /*
-Theme Name: Portfolio
-Template: twentytwentyone
-Author: Stéphanie COUPAMA
-Description: Thème enfant basé sur twentytwentyone.
-Version: 1.0
+ Theme Name: Portfolio
+ Theme URI: https://votre-site.com
+ Author: COUPAMA Stéphanie
+ Author URI: https://votre-site.com
+ Description: Un thème enfant basé sur Twenty Twenty-One
+ Template: twentytwentyone
+ Version: 1.0
 */
+
+/*************************** HEADER **********************/
+/* Bloquer le scroll */
+body.no-scroll {
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0 4px 14px 10px rgba(0, 0, 0, 0.03);
+}
+
+nav {
+  display: inline-flex;
+}
+
+.logo {
+  padding-left: 173px;
+}
+
+.logo img {
+  width: 216px;
+  height: 16px;
+  margin-left: 20px;
+}
+
+.menu {
+  padding-left: 514px;
+}
+
+.link-primary {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding: 0;
+  gap: 25px;
+}
+
+.link-primary li a:hover {
+  color: #000000;
+  font-weight: 900;
+}
+
+.link-primary li {
+  list-style-type: none;
+}
+
+.link-primary li a {
+  text-decoration: none;
+  font-family: "Space Mono", monospace;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 0;
+}
+
+/****************** FOOTER *********************/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  padding: 10px 0;
+  border-top: 2px solid #000;
+}
+
+.link-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-bottom: 0;
+  padding: 0;
+  gap: 80px;
+}
+
+.link-footer li a:hover {
+  color: #000000;
+  font-weight: 900;
+}
+
+.link-footer li {
+  list-style-type: none;
+}
+
+.link-footer li a {
+  text-decoration: none;
+  font-family: "Space Mono", monospace;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 0;
+}
