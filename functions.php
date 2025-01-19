@@ -16,3 +16,11 @@ register_nav_menus(array(
     'Header Menu' => 'Menu Principal',
     'Footer Menu' => 'Menu Foot',
 ));
+
+  ////////////// ACTIVER LE SUPPORT DU LOGO PERSONNALISÉ /////////////
+  add_theme_support('custom-logo', array(
+    'height'      => 60,
+    'width'       => 60,
+    'flex-height' => true,
+    'flex-width'  => true,
+));

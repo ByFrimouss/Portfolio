@@ -14,6 +14,11 @@
 <header>
     <nav>
 
+    <!-- Logo -->
+        <div class="logo">
+            <?php the_custom_logo(); ?>
+        </div>
+
         <!-- menu natif de wordpress -->
         <?php wp_nav_menu( array(
         'theme_location' => 'header-menu',
