@@ -24,3 +24,27 @@ register_nav_menus(array(
     'flex-height' => true,
     'flex-width'  => true,
 ));
+
+/////// HERO AVEC LE SCRIPT DE CHARGEMENT D’UNE IMAGE ALÉATOIRE ///////////
+
+function get_random_hero_image() {
+    $upload_dir = wp_get_upload_dir(); // Récupère le répertoire des uploads
+    $base_url = $upload_dir['baseurl']; // URL de base du dossier uploads
+
+    // URL DES IMAGES
+    $images = array(
+        $base_url . '/2025/01/responsive.jpg',
+        $base_url . '/2025/01/git.jpg',
+        $base_url . '/2025/01/css.jpg',
+        $base_url . '/2025/01/html.jpg',
+        $base_url . '/2025/01/laptop.jpg',
+        $base_url . '/2025/01/certifie.jpg',
+        $base_url . '/2025/01/nodejs.jpg',
+        $base_url . '/2025/01/chatgpt.jpg',
+        $base_url . '/2025/01/code.jpg',
+        $base_url . '/2025/01/php.jpg',
+    );
+
+    // Retourne une image aléatoire
+    return $images[array_rand($images)];
+}

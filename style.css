@@ -116,3 +116,20 @@ footer {
   color: #000;
   margin-bottom: 0;
 }
+
+/************** HERO BANNER  ******************/
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 962px;
+  z-index: 10;
+}
+.hero-content {
+  width: 1000px;
+  height: 142px;
+}
