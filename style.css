@@ -128,3 +128,289 @@ footer {
   align-items: center;
   height: 100vh;
 }
+
+/************************ LES PROJETS *********************/
+
+/*
+ Theme Name: Portfolio
+ Theme URI: https://votre-site.com
+ Author: COUPAMA Stéphanie
+ Author URI: https://votre-site.com
+ Description: Un thème enfant basé sur Twenty Twenty-One
+ Template: twentytwentyone
+ Version: 1.0
+*/
+
+/*************************** HEADER **********************/
+/* Bloquer le scroll */
+body.no-scroll {
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 120px;
+  background-color: #fff;
+  box-shadow: 0 4px 14px 10px rgba(0, 0, 0, 0.03);
+}
+
+nav {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  padding-left: 140px;
+}
+
+.logo img {
+  width: 120px;
+  height: 120px;
+  margin-left: 20px;
+}
+
+.menu {
+  padding-left: 620px;
+}
+
+.link-primary {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding: 0;
+  gap: 25px;
+}
+
+.link-primary li a:hover {
+  color: #000000;
+  font-weight: 900;
+}
+
+.link-primary li {
+  list-style-type: none;
+}
+
+.link-primary li a {
+  text-decoration: none;
+  font-family: "Space Mono", monospace;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 0;
+}
+
+/****************** FOOTER *********************/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  padding: 10px 0;
+  border-top: 2px solid #000;
+}
+
+.link-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-bottom: 0;
+  padding: 0;
+  gap: 80px;
+}
+
+.link-footer li a:hover {
+  color: #000000;
+  font-weight: 900;
+}
+
+.link-footer li {
+  list-style-type: none;
+}
+
+.link-footer li a {
+  text-decoration: none;
+  font-family: "Space Mono", monospace;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 0;
+}
+
+/************** HERO BANNER  ******************/
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/************************ LES PROJETS *********************/
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes dans la grille */
+  gap: 20px;
+}
+
+/* Conteneur de chaque projet */
+.photo-item {
+  width: 564px;
+  height: 495px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 5px 5px 15px #b20d8e90;
+  margin: 90px;
+}
+
+.photo-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image dans le conteneur */
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-info h3,
+.photo-category {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: left;
+  margin: 0;
+  color: #ffffff !important;
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 564px;
+  height: 495px;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+.photo-item:hover .photo-overlay {
+  opacity: 1;
+}
+
+.photo-info {
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: white;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.photo-icons {
+  display: flex;
+  gap: 10px;
+}
+.photo-icons a {
+  font-size: 20px;
+}
+
+.icon-view i,
+.icon-live i {
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  scale: 0.8;
+}
+
+/* Position spécifique des icônes */
+.icon-view {
+  position: relative;
+  left: 50%;
+  width: 50px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  background: url("Images/Icon_eye.svg") center center / 100% 100%;
+}
+
+.icon-lightbox {
+  position: relative;
+  top: -650%;
+  left: 170%;
+  width: 50px;
+  height: 30px;
+  background: url("Images/Icon_focus.svg") center center / 100% 100%;
+}
+
+/************* CHARGER PLUS ******************/
+
+#load-more-photos {
+  background-color: #1c88ed;
+  color: white;
+  width: 272px;
+  height: 50px;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: 620px;
+  margin-bottom: 70px;
+  box-shadow: 0px 2px 1px 0px #00000005;
+}
+
+#load-more-photos:hover {
+  color: white;
+  background-color: #b20d8d;
+  transform: translateY(-2px);
+}
+
+/* Effet lorsque le bouton est cliqué (enfoncé) */
+#load-more-photos:active {
+  transform: translateY(0);
+}
+
+/* Lorsque le bouton est en cours de chargement */
+#load-more-photos:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
