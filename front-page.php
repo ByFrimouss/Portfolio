@@ -2,7 +2,13 @@
 
 <!---------------- HERO BANNER --------------->
 <section class="hero-banner" style="background-image: url('<?php echo get_random_hero_image(); ?>');">
-    <h1>Gr@ph'Web</h1>
+<div class="glassmorphism-container">
+        <h1>Gr@ph'Web</h1>
+    </div>
+</section>
+
+<section id="anchor-projet">
+    <h2>Mes projets</h2>
 </section>
 
 <?php
@@ -81,4 +87,6 @@ if ($query->have_posts()) :
 else :
     echo '<p>Aucune photo trouvée.</p>';
 endif;
+
+
 get_footer();?>

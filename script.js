@@ -28,3 +28,26 @@ jQuery(document).ready(function ($) {
     });
   });
 });
+
+/////////////// ANIMATION SUR LES TITRES DES SECTIONS //////////////////////
+
+document.addEventListener("DOMContentLoaded", function () {
+  const target = document.querySelector("#anchor-projet h2");
+
+  // Crée un observateur
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          target.classList.add("visible"); // Ajoute la classe quand visible
+          observer.unobserve(target); // Stoppe l'observation une fois visible
+        }
+      });
+    },
+    {
+      threshold: 0.5, // L'élément doit être visible à 50%
+    }
+  );
+
+  observer.observe(target); // Observe l'élément
+});
