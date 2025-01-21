@@ -158,3 +158,11 @@ function custom_enqueue_scripts() {
     wp_enqueue_script('jquery');
 }
 add_action('wp_enqueue_scripts', 'custom_enqueue_scripts');
+
+/******************* LIGHTBOX ************************/
+
+function enqueue_lightbox_scripts() {
+    wp_enqueue_style('lightbox-css', get_stylesheet_directory_uri() . '/lightbox.css', array(), '1.0', 'all');
+    wp_enqueue_script('lightbox-js', get_stylesheet_directory_uri() . '/lightbox.js', array('jquery'), '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_lightbox_scripts');
