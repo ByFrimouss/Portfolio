@@ -45,9 +45,47 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
-      threshold: 0.5, // L'élément doit être visible à 50%
+      threshold: 0.1, // L'élément doit être visible à 50%
     }
   );
 
   observer.observe(target); // Observe l'élément
+});
+
+////////////// PARALLAX ///////////////
+document.addEventListener("DOMContentLoaded", () => {
+  // Sélectionner les titres
+  const titre = document.querySelector(".title");
+  const sousTitre = document.querySelector(".subtitle");
+  const placeSection = document.querySelector(".header-photo");
+
+  // Fonction qui ajuste la position des titres en fonction du scroll dans la section "a propos"
+  function moveTitle() {
+    // Obtenir la position de la section "a propos" par rapport au haut de la page
+    const sectionTop = placeSection.offsetTop;
+    const sectionHeight = placeSection.offsetHeight;
+    const scrollPosition = window.scrollY;
+
+    // Vérifier si le scroll est dans la section "a propos"
+    if (
+      scrollPosition >= sectionTop &&
+      scrollPosition <= sectionTop + sectionHeight
+    ) {
+      // Calculer le pourcentage de scroll dans la section "a propos"
+      const scrollInSection = scrollPosition - sectionTop;
+      const sectionScrollRatio = scrollInSection / sectionHeight;
+
+      // Ajuster les déplacements pour que les titres descendent vers le bas
+      const maxMove = sectionHeight - 120; // Limite à la hauteur de la section avec une marge de 20px
+      const moveTitre = Math.min(sectionScrollRatio * maxMove, maxMove);
+      const moveSousTitre = Math.min(sectionScrollRatio * maxMove, maxMove);
+
+      // Appliquer la transformation pour déplacer les titres
+      titre.style.transform = `translateY(${moveTitre}px)`;
+      sousTitre.style.transform = `translateY(${moveSousTitre}px)`;
+    }
+  }
+
+  // Attacher la fonction au scroll de la fenêtre
+  window.addEventListener("scroll", moveTitle);
 });
