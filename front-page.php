@@ -89,7 +89,7 @@ else :
 endif;
 ?>
 
-<section class="header-photo">
+<section id="a-propos" class="header-photo">
   <div class="about-img">
     <img src="<?php echo get_stylesheet_directory_uri() . '/Images/cover.png'; ?>" alt="moi">
   </div>
@@ -108,15 +108,22 @@ endif;
         Animée par une profonde attention envers les autres, je me définis comme une personne méticuleuse et dévouée, toujours prête à apporter un sourire à ceux qui m'entourent. <br><br>
         Mon parcours professionnel a été diversifié, enrichissant et unique. J'ai exercé des métiers aussi variés que Gendarme réserviste, Serveuse, Plongeuse, Cuisinière et Conductrice de transports de voyageurs. Mon amour pour les animaux m'a ensuite conduite à devenir éleveuse de la race American Bully, tout en obtenant mon diplôme ACACED pour chiens et chats. <br><br> Toutefois, ma reconversion dans le numérique m'a ouvert de nouvelles perspectives, et c'est dans ce domaine que j'ai trouvé une véritable passion.
         Ce qui me motive avant tout dans le numérique, c’est le côté graphique. Concevoir des plans de site et les voir se concrétiser m’apporte une immense satisfaction. Mon enthousiasme se nourrit de la créativité et de la précision, des valeurs que je mets en pratique dans tout ce que j’entreprends. <br><br>Je crois fermement que pour pouvoir apporter le meilleur de soi-même aux autres, il est essentiel de prendre le temps pour soi, de cultiver ses passions et de se nourrir d’expériences diverses. <br> Comme j’aime le dire : <strong>"Prenons le temps pour soi pour pouvoir le rendre aux autres." Fri'MouSs</strong> <br><br>
-        N'hésitez pas à me contacter, mon équipe et moi serons ravis de vous accompagner dans vos projets.
+        N'hésitez pas à me contacter, je serai ravis de vous accompagner dans vos projets.
       </p>
     </div>
   </div>
 </section>
 
-<div id="contact_form">
-    <?php echo do_shortcode('[contact-form-7 id="b34b531" title="Contact form 1"]'); ?>
+<div id="contact_section">
+    <h2 class="contact-title">Contactez-nous</h2>
+    
+    <p class="contact-description"><span>Des questions, des idées, ou juste l'envie de dire bonjour ?</span> <br> Envoyez-moi un message, et je vous répondrai aussi vite qu'un éclair !"</p>
+    
+    <div id="contact_form">
+        <?php echo do_shortcode('[wpforms id="61" title="Contact form"]'); ?>
+    </div>
 </div>
+
 
 
 
